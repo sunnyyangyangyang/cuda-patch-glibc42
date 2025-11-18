@@ -23,6 +23,7 @@ AutoReqProv:    no
 # This patch is for CUDA 13.0, which depends on this specific CRT package.
 # This ensures the patch target file exists.
 Requires:       cuda-crt-13-0
+Requires:       patch
 
 # By making this a variable, it's easy for others to fork and update for CUDA 13.1, etc.
 %global cuda_version 13.0
