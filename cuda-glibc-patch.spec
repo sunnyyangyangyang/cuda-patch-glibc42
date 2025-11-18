@@ -7,7 +7,7 @@
 #
 
 Name:           cuda-glibc-patch
-Version:        1.1
+Version:        1.2
 Release:        1%{?dist}
 Summary:        Applies a patch to NVIDIA CUDA Toolkit for modern glibc compatibility
 
@@ -78,8 +78,8 @@ TARGET_DIR=$(/usr/bin/dirname "%{target_file}")
 
 echo "Patching math_functions.h in ${TARGET_DIR}..."
 
-# Use -p5 to strip "opt/cuda/targets/x86_64-linux/include/crt/" from patch paths
-cd "${TARGET_DIR}" && /usr/bin/patch -p5 --forward --no-backup-if-mismatch < %{_datadir}/%{name}/fix-glibc242.patch
+# Use -p6 to strip "opt/cuda/targets/x86_64-linux/include/crt/" from patch paths
+cd "${TARGET_DIR}" && /usr/bin/patch -p6 --forward --no-backup-if-mismatch < %{_datadir}/%{name}/fix-glibc242.patch
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Failed to apply patch. Restoring original file." >&2
