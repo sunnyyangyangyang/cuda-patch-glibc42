@@ -4,7 +4,7 @@
 
 Name:           cuda-glibc-patch
 Version:        1.0
-Release:        1.alpha1%{?dist}
+Release:        2%{?dist}
 Summary:        Applies a patch to NVIDIA CUDA Toolkit for modern glibc compatibility
 
 License:        MIT AND 0BSD
