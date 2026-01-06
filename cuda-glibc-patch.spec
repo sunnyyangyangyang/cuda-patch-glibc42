@@ -17,7 +17,7 @@ AutoReqProv:    no
 Requires:       cuda-crt-13-0
 Requires:       patch
 
-%global cuda_version 13.0
+%global cuda_version 13.1
 %global target_file /usr/local/cuda-%{cuda_version}/targets/x86_64-linux/include/crt/math_functions.h
 %global backup_file %{target_file}.glibc-patch.backup
 
